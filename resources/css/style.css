@@ -58,9 +58,8 @@ header .container {
 }
 
 /* headline */
-.headline {
+.headline.container{
   display: flex;
-  width: 100%;
   justify-content: flex-end;
 }
 
@@ -70,9 +69,8 @@ header .container {
   font-weight: bold;
   font-size: 2rem;
   line-height: 1.2;
-  position: relative;
-  left: 2rem;
-  margin-top: 10rem;
+  margin: 10rem -2rem 0 0;
+  display: block;
 }
 
 /* container with icons */
@@ -138,21 +136,109 @@ footer {
 
 /* media queries */
 
+/* don't show this unless the device is phone-sized */
+
+@media only screen and (min-width: 470px) {
+  .alt-menu {
+    display: none;
+  }
+}
+
 /* tablets */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px){
 /* universal */
   .container {
     width: 100%;
   }
 
 /* header */
-  header .container {
-    margin: 0;
-  }
-
   header {
     height: 22rem;
+    padding-top: 0;
   }
-/* headline */
+  /* headline */
 
+  .headline h1{
+    padding: 1.5rem 4rem;
+    font-size: 1.33rem;
+    margin: 5rem 2rem 0 0;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+/* universal */
+  .container {
+    max-width: 100%;
+  }
+/* header */
+  header {
+    height: 17rem;
+    padding-top: 0;
+    background-position: 20%
+  }
+
+  .top-bar h2 {
+    display: none;
+  }
+
+  .menu span {
+    display: none;
+  }
+
+  /* headline */
+  .headline.container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .headline h1 {
+    padding: 1rem;
+    font-size: 1rem;
+    margin: 9rem 0 0 0;
+    width: 100%;
+  }
+
+/* details */
+  .icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3.77rem 0;
+    font-size: 0.77rem;
+  }
+
+  .image {
+    margin: 0.77rem 0;
+    justify-content: center;
+
+  }
+
+/* blurbs */
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blurb {
+    width: 100%;
+  }
+
+  .blurb h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .blurb p {
+    padding: 1rem 0 4rem .25rem;
+  }
+
+/* footer */
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+  footer h2 {
+    display: none;
+  }
 }
