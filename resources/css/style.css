@@ -14,21 +14,19 @@ html {
 }
 
 /* header */
-.header {
+header {
   height: 30rem;
   background-image: url("../media/glasses-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-top: 1rem;
 }
 
 /* top menu & logo */
 
-.header .container {
-  margin: 1rem 0 10rem 0;
+header .container {
+  display: flex;
 }
 
 .top-bar {
@@ -55,7 +53,7 @@ html {
   font-size: 1rem;
 }
 
-nav span {
+.menu span {
   padding-left: 2rem;
 }
 
@@ -74,6 +72,7 @@ nav span {
   line-height: 1.2;
   position: relative;
   left: 2rem;
+  margin-top: 10rem;
 }
 
 /* container with icons */
@@ -135,4 +134,25 @@ footer {
   padding: 4rem;
   background-color: azure;
   width: 100%
+}
+
+/* media queries */
+
+/* tablets */
+@media only screen and (max-width: 1024px) {
+/* universal */
+  .container {
+    width: 100%;
+  }
+
+/* header */
+  header .container {
+    margin: 0;
+  }
+
+  header {
+    height: 22rem;
+  }
+/* headline */
+
 }
